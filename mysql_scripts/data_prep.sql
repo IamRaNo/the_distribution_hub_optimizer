@@ -16,20 +16,26 @@ select * from bill_clean limit 5;
 -- --------------------------------------------
 
 
-with total_asset as (
+-- Total Assets
+create view total_assets as(
     select
         `state`,
         str_to_date(concat_ws('-', `year`, `month`, 1), '%Y-%m-%d') as `date`,
         round((`intra_asset(c)` + `out_asset(c)` + `in_asset(c)`),2) as `total_asset`
     from bill_clean
-)
-select * from total_asset;
+);
+
+-- Last Year GSDP
+create view last_gsdp as(
+    select 
+        * 
+        from gsdp_clean 
+        where fy_start = (
+            select 
+                max(fy_start) 
+            from gsdp_clean
+        )
+);
 
 
-select * from gsdp_clean limit 5;
 
-select max(fy_start) from gsdp_clean;
-
-select * from gsdp_clean where `gsdp(c)` is null;
-
-select * from gsdp_clean;
