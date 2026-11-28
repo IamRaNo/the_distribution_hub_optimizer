@@ -1,4 +1,4 @@
-state,year,month,intra_sup,intra_bill,intra_asset,out_sup,out_bill,out_asset,in_sup,in_bill,in_asset,fy_start
+state,year,month,intra_sup,intra_bill,intra_asset(c),out_sup,out_bill,out_asset(c),in_sup,in_bill,in_asset(c),fy_start
 andhra pradesh,2018,7,25756,981997,18334.87,16282,362407,23846.02,53563,587192,24182.19,2018
 andhra pradesh,2018,8,27138,1089732,19676.73,18129,389635,26396.24,61724,735434,29048.18,2018
 andhra pradesh,2018,9,26943,1093687,19955.53,17823,384081,25825.63,61042,678325,27677.55,2018
